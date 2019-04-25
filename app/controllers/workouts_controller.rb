@@ -21,6 +21,8 @@ class WorkoutsController < ApplicationController
 
   # GET: /workouts/5
   get "/workouts/:id" do
+    #binding.pry (look at params hash)
+    @workout = Workout.find(params[:id])
     erb :"/workouts/show.html"
   end
 
